@@ -1,1 +1,4 @@
 This is blackjack, made by Kai Sato, Shiva Nallapati, and Spandan Goel
+Classes we need: Game (for playing and initializing the game itself)
+                 ComPlayer (for computer player as it will differ)
+                 PlayerChips (for the chips of the player)
