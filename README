@@ -1,6 +1,7 @@
-This is blackjack, made by Kai Sato, Shiva Nallapati, and Spandan Goel
-Classes we need: Game (for playing and initializing the game itself)
-                    instance for a Shoe
+# This is blackjack, made by Kai Sato, Shiva Nallapati, and Spandan Goel
+## Classes we need: Game (for playing and initializing the game itself)
+                    ### instance for a Shoe
+                       #### private Shoe gameShoe;
                     instance for a ComPlayer
                     instance for PlayerChips
                     instance for Hand for user
@@ -11,16 +12,16 @@ Classes we need: Game (for playing and initializing the game itself)
                     method to calculate winning
                     method for splitting cards
                     
-                 ComPlayer (for computer player as it will differ)
+##                 ComPlayer (for computer player as it will differ)
                     instance for Hand
                     method for computer to play
                     
-                 PlayerChips (for the chips of the player)
+##                 PlayerChips (for the chips of the player)
                     instance for number of chips
                     method for adding chips
                     method for removing chips
                     
-                 Hand (for the cards that a player has)
+##                 Hand (for the cards that a player has)
                     instance for ArrayList of cards
                     method to add a card
                     method to calculate total value of hand
