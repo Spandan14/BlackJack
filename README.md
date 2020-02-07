@@ -7,13 +7,26 @@ private Shoe gameShoe; // main shoe for the game to run on
 private ComPlayer computer; // computer player/dealer
 private PlayerChips playerMoney; // represents player's big bucks
 private Hand userHand; // user's cards
+private Hand comhand;
 ```
 #### Methods
 ```
-public void startGame(Shoe s, Hand comHand) {
+public void runGame() {
+  // run startGame()
+  // ask the player if they want to double down, if yes then run doubleDown then run stand, if no, then proceed
+  // ask the player if they want to hit or stand
+  // if hit, hit their hand
+  //    show them the value, then call isBust
+  //        if they have a bust, then end the game, do NOT call calculate winnings and display a dismayed message
+  //        if they do not bust, ask them if they want to hit or stand again, and repeat
+  // if stand, make them stand
+  // then call computerPlay
+  // output and print the results and how much they won
+}
+public void startGame(Hand comHand) {
   // Deal card from shoe s to userHand, then deal card to comHand, repeat once more
   // call isBlackjack for the computer's hand and the user's hand, and display the hand of the user on screen
-  // if anyone has blackjack, call calculate winnings appropriately
+  // if anyone has blackjack, call calculate winnings appropriately (use isBlack as true if player has blackjack only)
 }
 public boolean isBlackjack(Hand h) {
   // checks if the total value of the hand h by calling totalValue from the Hand class is equal to 21
@@ -21,14 +34,14 @@ public boolean isBlackjack(Hand h) {
 public boolean isBust(Hand h) {
   // checks if the total value of the hand h by calling totalValue from the Hand class is greater than 21
 }
-public void doubleDown(Hand h, PlayerChips p, Shoe s) {
+public void doubleDown() {
   // calls hit exactly once and then executes isBlackjack and isBust to find the value, and if the player busts
   // then removes the bet from the player's total chips
 }
-public void stand(ComPlayer c) {
-  // ends the player's turn and starts ComPlayer c's turn
+public void stand() {
+  // ends the player's turn and starts ComPlayer computer's turn
 }
-public void calculateWinnings(int PlayerScore, boolean isBlack, int ComScore, PlayerChips p) {
+public void calculateWinnings(int PlayerScore, boolean isBlack, int ComScore) {
   // if isBlack is true, then call addChips from p and add 5/2 times the current bet
   // if isBlack is false and the user wins then add 2 times the current bet
   // otherwise exit
