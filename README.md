@@ -30,7 +30,7 @@ public void startGame(Hand comHand) {
   // if anyone has blackjack, call calculate winnings appropriately (use isBlack as true if player has blackjack only)
 }
 public boolean isBlackjack(Hand h) {
-  // checks if the total value of the hand h by calling totalValue from the Hand class is equal to 21
+  // checks if the first 2 cards have a total value of the hand h by calling totalValue from the Hand class is equal to 21
 }
 public boolean isBust(Hand h) {
   // checks if the total value of the hand h by calling totalValue from the Hand class is greater than 21
