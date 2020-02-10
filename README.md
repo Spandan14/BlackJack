@@ -1,5 +1,18 @@
 # This is blackjack, made by Kai Sato, Shiva Nallapati, and Spandan Goel
+## Dependencies
+```
+import java.util.Scanner; // for Game and Play
+import java.util.ArrayList; // for every class
+```
 ## Classes we need:
+### Play (for playing the game)
+#### Methods
+```
+public static void main(String args[]) {
+  // make a new Game class g
+  // run g.runGame()
+}
+```
 ### Game (for playing and initializing the game itself)
 #### Instances
 ```
@@ -7,7 +20,8 @@ private Shoe gameShoe; // main shoe for the game to run on
 private ComPlayer computer; // computer player/dealer
 private PlayerChips playerMoney; // represents player's big bucks
 private Hand userHand; // user's cards
-private Hand comhand;
+private Hand comhand; // com's hand
+private Scanner scan; // scanner
 ```
 #### Methods
 ```
