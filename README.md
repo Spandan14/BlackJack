@@ -24,8 +24,9 @@ public void runGame() {
   // output and print the results and how much they won
 }
 public void startGame(Hand comHand) {
-  // Deal card from shoe s to userHand, then deal card to comHand, repeat once more
-  // call isBlackjack for the computer's hand and the user's hand, and display the hand of the user on screen
+  // shuffle the Shoe s
+  // Deal card from Shoe s to userHand, then deal card to comHand, print that card, repeat once more but don't print com's card this time around
+  // call isBlackjack for the computer's hand and the user's hand, and display the hand of the user on screen and 
   // if anyone has blackjack, call calculate winnings appropriately (use isBlack as true if player has blackjack only)
 }
 public boolean isBlackjack(Hand h) {
@@ -55,6 +56,7 @@ private Hand hand;
 #### Methods
 ```
 public int computerPlay(Shoe s) {
+  // show the computer's hand
   // if the value of computer's hand is less than 17, then the computer must hit until the computer's hand 
   // is greater than 16
   // run calculateWinnings once computer's play ends
