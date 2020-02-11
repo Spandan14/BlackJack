@@ -52,6 +52,7 @@ public void stand() {
 public void calculateWinnings(int PlayerScore, boolean isBlack, int ComScore) {
   // if isBlack is true, then call addChips from p and add 5/2 times the current bet
   // if isBlack is false and the user wins then add 2 times the current bet
+  // if there is a tie, then a push occurs and the bet is returned to the user
   // otherwise exit
 }
 ```
@@ -83,6 +84,9 @@ private int bet;
 public void bet(int b) {
   // set the bet to b
   // call removeChips(b)
+}
+public void push() {
+  // adds the bet back to the chip count
 }
 public void addChips(int c) {
   // adds c to chips
