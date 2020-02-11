@@ -28,6 +28,13 @@ public class PlayerChips
         removeChips(b);
     }
     /**
+     * @des adds the bet back as there is a tie
+     * @Name push
+     /
+     public void push() {
+        addChips(bet);
+     }
+    /**
      * @des adding chips to the original instance variable chips
      * @Name addChips
      * @param int c: chips
