@@ -1,8 +1,9 @@
 
+
 /**
  * Write a description of class ComPlayer here.
  *
- * @author (your name)
+ * @author (Shiva Nallapati)
  * @version (a version number or a date)
  */
 public class ComPlayer
@@ -12,12 +13,29 @@ public class ComPlayer
         hand=h;
     }
     
-    public int computerPlay(Shoe s){
-        while(hand.value<17){
-            hand.value+=hand.hit();
-            if(hand.value()>16){
-              Play.calculateWinnings();  
-            }
-        }
+    /**
+     * @Name: getHandValue
+     * @Param: None
+     * 
+     * description: returns the value of the computer players hand.
+     * return: int
+     */
+    public int getHandValue() {
+        return hand.value();
+    }
+    
+    /**
+     * @Name: computerPlay
+     * @Param: None
+     * description: this method makes the computer player or dealer hit everytime 
+     * they are below 17, and end their turn once they are above 16.
+     * return: no return, void
+     * 
+     */
+    public void computerPlay(){
+         while(hand.value()<17){
+            hand.hit();
+         }
+        
     }
 }
