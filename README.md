@@ -20,7 +20,6 @@ private Shoe gameShoe; // main shoe for the game to run on
 private ComPlayer computer; // computer player/dealer
 private PlayerChips playerMoney; // represents player's big bucks
 private Hand userHand; // user's cards
-private Hand comhand; // com's hand
 private Scanner scan; // scanner
 ```
 #### Methods
@@ -43,12 +42,6 @@ public void startGame(Hand comHand) {
   // call isBlackjack for the computer's hand and the user's hand, and display the hand of the user on screen and 
   // if anyone has blackjack, call calculate winnings appropriately (use isBlack as true if player has blackjack only)
 }
-public boolean isBlackjack(Hand h) {
-  // checks if the first 2 cards have a total value of the hand h by calling totalValue from the Hand class is equal to 21
-}
-public boolean isBust(Hand h) {
-  // checks if the total value of the hand h by calling totalValue from the Hand class is greater than 21
-}
 public void doubleDown() {
   // calls hit exactly once and then executes isBlackjack and isBust to find the value, and if the player busts
   // then removes the bet from the player's total chips
@@ -69,6 +62,9 @@ private Hand hand;
 ```
 #### Methods
 ```
+public int getHandValue() {
+  // uses the value method from Hand and returns the value of computer's hand
+}
 public void computerPlay(Shoe s) {
   // show the computer's hand
   // if the value of computer's hand is less than 17, then the computer must hit until the computer's hand 
@@ -102,6 +98,12 @@ private ArrayList hand;
 ```
 #### Methods
 ```
+public boolean isBlackjack(Hand h) {
+  // checks if the first 2 cards have a total value of the hand h by calling totalValue from the Hand class is equal to 21
+}
+public boolean isBust(Hand h) {
+  // checks if the total value of the hand h by calling totalValue from the Hand class is greater than 21
+}
 public int hit(Shoe s) {
   // takes the shoe s and adds a random card to the ArrayList hand
   // returns the new value of the card by calling value()
