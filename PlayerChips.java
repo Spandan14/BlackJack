@@ -9,19 +9,38 @@ public class PlayerChips
 {
     private int chips;
     private int bet;
+    /**
+     * @Name PlayerChips
+     * @param int c: chips int b:bet
+     */
     public PlayerChips(int c, int b)
     {
         chips = c;
         bet = b;
     }
+    /**
+     * @des remoivng bet from the chips
+     * @Name bet
+     * @param int b: bet
+     */
     public void bet(int b)
     {
         removeChips(b);
     }
+    /**
+     * @des adding chips to the original instance variable chips
+     * @Name addChips
+     * @param int c: chips
+     */
     public void addChips(int c)
     {
         chips+=c;
     }
+    /**
+     * @des remoivng bet from the chips
+     * @Name removeChips
+     * @param int c: chips
+     */
     public void removeChips(int c)
     {
         chips-=c;
