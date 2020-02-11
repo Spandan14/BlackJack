@@ -69,7 +69,7 @@ private Hand hand;
 ```
 #### Methods
 ```
-public int computerPlay(Shoe s) {
+public void computerPlay(Shoe s) {
   // show the computer's hand
   // if the value of computer's hand is less than 17, then the computer must hit until the computer's hand 
   // is greater than 16
