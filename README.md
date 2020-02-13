@@ -19,13 +19,12 @@ public static void main(String args[]) {
 private Shoe gameShoe; // main shoe for the game to run on
 private ComPlayer computer; // computer player/dealer
 private PlayerChips playerMoney; // represents player's big bucks
-private Hand userHand; // user's cards
 private Scanner scan; // scanner
 ```
 #### Methods
 ```
 public void runGame() {
-  // run startGame()
+  // run startGame(), use the returned Hand as userHand
   // ask the player if they want to double down, if yes then run doubleDown then run stand, if no, then proceed
   // ask the player if they want to hit or stand
   // if hit, hit their hand
@@ -36,9 +35,10 @@ public void runGame() {
   // then call computerPlay
   // output and print the results and how much they won
 }
-public void startGame(Hand comHand) {
+public Hand startGame() {
+  // create a Hand instance for the user, userHand
   // shuffle the Shoe s
-  // Deal card from Shoe s to userHand, then deal card to comHand, print that card, repeat once more but don't print com's card this time around
+  // Deal(use add) card from Shoe s to userHand, then deal card to comPlayer(use dealToCom), print that card, repeat once more but don't print com's card this time around
   // call isBlackjack for the computer's hand and the user's hand, and display the hand of the user on screen and 
   // if anyone has blackjack, call calculate winnings appropriately (use isBlack as true if player has blackjack only)
 }
@@ -65,6 +65,9 @@ private Hand hand;
 ```
 public int getHandValue() {
   // uses the value method from Hand and returns the value of computer's hand
+}
+public void dealToCom() {
+  // add to com's hand
 }
 public void computerPlay(Shoe s) {
   // show the computer's hand
@@ -102,6 +105,9 @@ private ArrayList hand;
 ```
 #### Methods
 ```
+public void addCard(Shoe s) {
+   // takes the shoe s and adds a random card to the ArrayList hand
+}
 public boolean isBlackjack(Hand h) {
   // checks if the first 2 cards have a total value of the hand h by calling totalValue from the Hand class is equal to 21
 }
