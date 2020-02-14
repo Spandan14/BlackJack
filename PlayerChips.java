@@ -13,27 +13,30 @@ public class PlayerChips
      * @Name PlayerChips
      * @param int c: chips int b:bet
      */
-    public PlayerChips(int c, int b)
+    public PlayerChips(int c)
     {
         chips = c;
-        bet = b;
+        bet = 0;
     }
+
     /**
-     * @des remoivng bet from the chips
+     * @des remoivng bet from the chips and is the player tries to bet more
+     * than their total balance, print "not enough money" 
      * @Name bet
      * @param int b: bet
      */
     public void bet(int b)
     {
-        removeChips(b);
+        bet = b;
+        if(b>=chips)
+        {
+            System.out.println("Not enough chips");
+        }
+        else{
+            removeChips(b);
+        }
     }
-    /**
-     * @des adds the bet back as there is a tie
-     * @Name push
-     /
-     public void push() {
-        addChips(bet);
-     }
+
     /**
      * @des adding chips to the original instance variable chips
      * @Name addChips
@@ -43,6 +46,7 @@ public class PlayerChips
     {
         chips+=c;
     }
+
     /**
      * @des remoivng bet from the chips
      * @Name removeChips
@@ -51,5 +55,12 @@ public class PlayerChips
     public void removeChips(int c)
     {
         chips-=c;
+    }
+
+    public String toString()
+    {
+        return "Current Bet: " + String.valueOf(bet)+"\n"+
+        "Current Balance of Chips: " + String.valueOf(chips)+"\n"; 
+
     }
 }
