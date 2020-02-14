@@ -102,6 +102,7 @@ public void removeChips(int c) {
 #### Instances
 ```
 private ArrayList hand;
+private Shoe s;
 ```
 #### Methods
 ```
@@ -114,7 +115,7 @@ public boolean isBlackjack(Hand h) {
 public boolean isBust(Hand h) {
   // checks if the total value of the hand h by calling totalValue from the Hand class is greater than 21
 }
-public int hit(Shoe s) {
+public int hit() {
   // takes the shoe s and adds a random card to the ArrayList hand
   // returns the new value of the card by calling value()
 }
