@@ -9,8 +9,8 @@
 public class ComPlayer
 {
     private Hand hand;
-    public ComPlayer(Deck h){
-        hand=h;
+    public ComPlayer(Shoe h){
+        hand = new Hand(h);
     }
     
     /**
@@ -32,7 +32,7 @@ public class ComPlayer
      * return: no return, void
      * 
      */
-    public void computerPlay(){
+    public void computerPlay(Shoe s){
          while(hand.value()<17){
             hand.hit();
          }
