@@ -5,8 +5,10 @@
 import java.util.ArrayList;
 public class Hand {
     private ArrayList<Card>hand;
-    public Hand(Shoe s) {
+    private Shoe s;
+    public Hand(Shoe sh) {
         hand = new ArrayList<Card>();
+        s = sh;
         s.shuffleShoe();
         hand.add(s.dealCard());
         hand.add(s.dealCard());
@@ -16,7 +18,7 @@ public class Hand {
      * @param Shoe shoe to deal from
      * @return int new value of hand
      */
-    public int hit(Shoe s) {
+    public int hit() {
         hand.add(s.dealCard());
         return this.value();
     }
@@ -53,5 +55,17 @@ public class Hand {
      */
     public boolean isBust() {
         return this.value() > 21;
+    }
+    /**
+     * returns hand
+     * @return string cards in hand
+     */
+    public String toString() {
+        String output = "";
+        for (Card i: hand) {
+            output += i.toString() + "\n";
+        }
+        output += ("The value of the hand is: " + String.valueOf(this.value()));
+        return output;
     }
 }
