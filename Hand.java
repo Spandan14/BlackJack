@@ -7,6 +7,7 @@ public class Hand {
     private ArrayList<Card>hand;
     public Hand(Shoe s) {
         hand = new ArrayList<Card>();
+        s.shuffleShoe();
         hand.add(s.dealCard());
         hand.add(s.dealCard());
     }
