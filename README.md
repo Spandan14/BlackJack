@@ -66,8 +66,8 @@ private Hand hand;
 public int getHandValue() {
   // uses the value method from Hand and returns the value of computer's hand
 }
-public void dealToCom() {
-  // add to com's hand
+public void dealToCom(Shoe s) {
+  // add to com's hand from Shoe s
 }
 public void computerPlay(Shoe s) {
   // show the computer's hand
