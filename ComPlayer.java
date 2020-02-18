@@ -1,5 +1,4 @@
 
-
 /**
  * Write a description of class ComPlayer here.
  *
@@ -9,10 +8,10 @@
 public class ComPlayer
 {
     private Hand hand;
-    public ComPlayer(Shoe h){
-        hand = new Hand(h);
+    public ComPlayer(Shoe s){
+         hand=new Hand(s);
     }
-    
+
     /**
      * @Name: getHandValue
      * @Param: None
@@ -23,6 +22,11 @@ public class ComPlayer
     public int getHandValue() {
         return hand.value();
     }
+
+    public void dealToCom(){
+        hand.hit();
+        hand.isBust();
+    }
     
     /**
      * @Name: computerPlay
@@ -32,10 +36,19 @@ public class ComPlayer
      * return: no return, void
      * 
      */
-    public void computerPlay(Shoe s){
+    public void computerPlay(){
          while(hand.value()<17){
-            hand.hit();
-         }
+              hand.hit();
+            }
+            
+          
+    }
+    
+    public String toString(){
+        if(hand.value()>21){
+            return "Dealer Busts, Value is: "+hand.value();
+        }
+        return "Dealers Value: "+hand.value(); 
         
     }
 }
