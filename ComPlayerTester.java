@@ -3,7 +3,7 @@
 /**
  * Write a description of class comPLayerTester here.
  *
- * @author (your name)
+ * @author (Shiva Nallapati)
  * @version (a version number or a date)
  */
 public class ComPlayerTester
