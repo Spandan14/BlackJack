@@ -1,4 +1,5 @@
 
+
 /**
  * Write a description of class comPLayerTester here.
  *
@@ -11,11 +12,15 @@ public class ComPlayerTester
     {
         Shoe comHand=new Shoe(4);
         ComPlayer c1=new ComPlayer(comHand);
-        c1.dealToCom();
+        
+        System.out.println(c1);
+        
         c1.computerPlay();
+        
         System.out.println(c1);
         
         
-    }
     
+    
+   }
 }
