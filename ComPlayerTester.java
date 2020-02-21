@@ -1,5 +1,4 @@
 
-
 /**
  * Write a description of class comPLayerTester here.
  *
@@ -15,11 +14,18 @@ public class ComPlayerTester
         
         System.out.println(c1);
         
-        c1.computerPlay();
         
-        System.out.println(c1);
+        if(c1.getHandValue()<17){
+            c1.dealToCom();
+            System.out.println(c1);
+        }
         
-        
+        if(c1.getHandValue()>17&&c1.getHandValue()<21 ){
+            c1.computerPlay();
+            System.out.println(c1);
+         
+        }
+       
     
     
    }
