@@ -10,7 +10,7 @@ public class HandTester {
             System.out.println(hand1);
             System.out.println("The hand is a blackjack?: " + hand1.isBlackjack());
          
-            while (!hand1.isBust()) {
+            while (!hand1.isBust() && !hand1.isBlackjack()) {
                 hand1.hit();
                 System.out.println(hand1);
                 System.out.println("The hand is a blackjack?: " + hand1.isBlackjack());

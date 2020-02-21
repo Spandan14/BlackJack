@@ -22,10 +22,14 @@ public class ComPlayer
     public int getHandValue() {
         return hand.value();
     }
-
+    public Hand getHand() {
+        return hand;
+    }
+    public Card getFirstCard() {
+        return hand.returnFirstCard();
+    }
     public void dealToCom(){
         hand.hit();
-        hand.isBust();
     }
     
     /**

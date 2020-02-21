@@ -56,6 +56,9 @@ public class Hand {
     public boolean isBust() {
         return this.value() > 21;
     }
+    public Card returnFirstCard() {
+        return hand.get(0);
+    }
     /**
      * returns hand
      * @return string cards in hand
