@@ -2,7 +2,7 @@
 /**
  * Write a description of class comPLayerTester here.
  *
- * @author (your name)
+ * @author: Shiva Nallapati
  * @version (a version number or a date)
  */
 public class ComPlayerTester
@@ -20,7 +20,7 @@ public class ComPlayerTester
             System.out.println(c1);
         }
         
-        if(c1.getHandValue()>17&&c1.getHandValue()<21 ){
+        if(c1.getHandValue()>17&&c1.getHandValue()<=21 ){
             c1.computerPlay();
             System.out.println(c1);
          
