@@ -58,4 +58,7 @@ public class PlayerChips
     {
         chips-=c;
     }
+    public String toString() {
+        return "Current Amount: " + chips;
+    }
 }
