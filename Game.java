@@ -58,9 +58,6 @@ public class Game
    }
    private Hand startGame() {
        System.out.println(playerMoney);
-       Hand userHand = new Hand(gameShoe);
-       System.out.println(userHand);
-       System.out.println("One of com's cards is hidden. The other one is: " + computer.getFirstCard());
        System.out.println("What is your bet?: ");
        int q = scan.nextInt();
        while ((q <= 0 || q % 10 != 0) || q > playerMoney.getChips()) {
@@ -70,6 +67,11 @@ public class Game
        }
        System.out.println("Bet made!");
        playerMoney.bet(q);
+       
+       Hand userHand = new Hand(gameShoe);
+       System.out.println(userHand);
+       System.out.println("One of com's cards is hidden. The other one is: " + computer.getFirstCard());
+       
        if (computer.getHand().isBlackjack() || userHand.isBlackjack()) {
            calculateWinnings(userHand);
            return null;
