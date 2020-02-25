@@ -45,10 +45,11 @@ public class Game
                System.out.println("Your hand's details after hitting:\n" + userHand);
                if (userHand.isBust()) {
                    calculateWinnings(userHand);
-                   continue;
+                   break;
                }
                System.out.println("Do you wish to hit? If not, then you will stand. (y/n)");
            }
+           if (userHand.isBust()) {continue;}
            System.out.println("You have now stood.");
            stand(userHand);
            continue;
