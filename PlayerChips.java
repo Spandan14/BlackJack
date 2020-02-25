@@ -32,6 +32,7 @@ public class PlayerChips
     public void bet(int b)
     {
         removeChips(b);
+        bet = b;
     }
     /**
      * @des adds the bet back as there is a tie

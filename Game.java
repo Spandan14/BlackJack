@@ -1,4 +1,5 @@
 
+
 import java.util.Scanner;
 public class Game
 {
@@ -14,6 +15,8 @@ public class Game
    public void runGame() {
        System.out.println("\u000C");
        while (playerMoney.getChips() > 0) {
+           System.out.println();
+           System.out.println();
            computer = new ComPlayer(gameShoe);
            Hand userHand = startGame();
            System.out.println("Your hand's details:\n" + userHand);
@@ -63,10 +66,13 @@ public class Game
        return userHand;
    }
    private void stand(Hand userHand) {
+       
        computer.computerPlay();
        calculateWinnings(userHand);
    }
    private void doubleDown(Hand userHand) {
+       System.out.println();
+       System.out.println();
        System.out.println("Your hand's details:\n" + userHand);
        playerMoney.bet(playerMoney.getBet());
        userHand.hit();
@@ -74,7 +80,8 @@ public class Game
        stand(userHand);
    }
    private void calculateWinnings(Hand userHand) {
-      
+       System.out.println();
+       System.out.println();
        if (computer.getHand().isBlackjack()) {
            System.out.println("Computer has blackjack! Lucky it!");
            if (userHand.isBlackjack()) {

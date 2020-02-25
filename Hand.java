@@ -33,7 +33,7 @@ public class Hand {
         }
         if (sum > 21) {
             for (int i = 0; i < hand.size(); i++) {
-                if ((hand.get(i)).isAce()) {
+                if ((hand.get(i)).isAce() && sum > 21) {
                     sum -= 10;
                 }
             }
