@@ -131,6 +131,7 @@ public class Game
            System.out.println("Look at that, both of you have the same hand value! It is a push!");
            System.out.println("Your hand's details:\n" + userHand);
            System.out.println("Computer's hand's details:\n" + computer.getHand());
+           playerMoney.push();
            System.out.println(playerMoney);
            return;
        }
