@@ -1,5 +1,6 @@
 
 
+
 import java.util.Scanner;
 public class Game
 {
@@ -19,11 +20,19 @@ public class Game
            System.out.println();
            computer = new ComPlayer(gameShoe);
            Hand userHand = startGame();
-           System.out.println("Your hand's details:\n" + userHand);
-           System.out.println("Do you wish to double down? (y/n)");
-           if (scan.next().equals("y")) {
-               doubleDown(userHand);
+           if (userHand == null) {
                continue;
+           }
+           System.out.println("Your hand's details:\n" + userHand);
+           if (playerMoney.getBet()*2 > playerMoney.getChips()) {
+               System.out.println("You cannot double down due to a lack of chips, poor player!");
+           }
+           else {
+               System.out.println("Do you wish to double down? (y/n)");
+               if (scan.next().equals("y")) {
+                   doubleDown(userHand);
+                   continue;
+               }
            }
            System.out.println("Do you wish to stand? (y/n)");
            if (scan.next().equals("y")) {
@@ -62,6 +71,7 @@ public class Game
        playerMoney.bet(q);
        if (computer.getHand().isBlackjack() || userHand.isBlackjack()) {
            calculateWinnings(userHand);
+           return null;
        }
        return userHand;
    }
@@ -73,6 +83,7 @@ public class Game
    private void doubleDown(Hand userHand) {
        System.out.println();
        System.out.println();
+       
        System.out.println("Your hand's details:\n" + userHand);
        playerMoney.bet(playerMoney.getBet());
        userHand.hit();
