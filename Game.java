@@ -24,7 +24,7 @@ public class Game
                continue;
            }
            System.out.println("Your hand's details:\n" + userHand);
-           if (playerMoney.getBet()*2 > playerMoney.getChips()) {
+           if (playerMoney.getBet() > playerMoney.getChips()) {
                System.out.println("You cannot double down due to a lack of chips, poor player!");
            }
            else {
