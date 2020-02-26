@@ -1,6 +1,5 @@
 
 
-
 import java.util.Scanner;
 public class Game
 {
@@ -13,6 +12,11 @@ public class Game
         playerMoney = new PlayerChips(1000);
         scan = new Scanner(System.in);
     }
+    /**
+     * @author Spandan Goel
+     * Method to Run Game and go through everything
+     * 
+     */
     public void runGame() {
         System.out.println("\u000C");
         System.out.println("Welcome to the [segmentation fault (core dumped)] casino!");
@@ -62,6 +66,11 @@ public class Game
         }
         return;
     }
+    /**
+     * method to place bets and start Game
+     * @author Shiva Nallapati
+     * @return Hand hand of the user
+     */
     private Hand startGame() {
         System.out.println("♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢");
         System.out.println(playerMoney);
@@ -90,11 +99,22 @@ public class Game
         }
         return userHand;
     }
+    /**
+     * @des Stand Method to end player's turn
+     * @author Shiva Nallapati
+     * @param Hand hand of the user
+     */
     private void stand(Hand userHand) {
 
         computer.computerPlay();
         calculateWinnings(userHand);
     }
+    /**
+     * @des method to Double Down user's turn
+     * @author Shiva Nallapati
+     * @param Hand hand of the user
+     * 
+     */
     private void doubleDown(Hand userHand) {
         System.out.println();
         System.out.println();
@@ -108,6 +128,12 @@ public class Game
         System.out.println("♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢♠♣♥♦♤♧♡♢\n");
         stand(userHand);
     }
+    /**
+     * Method to calculateWinnings and give money to player
+     * @author Spandan Goel
+     * @param Hand hand of the user
+     * 
+     */
     private void calculateWinnings(Hand userHand) {
         System.out.println();
         System.out.println();
