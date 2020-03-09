@@ -9,7 +9,9 @@ public class Hand {
     public Hand(Shoe sh) {
         hand = new ArrayList<Card>();
         s = sh;
-        s.shuffleShoe();
+        if (s.getNumCardsInShoe < 75 || s.getNumCardsInShoe == 364) {
+            s.shuffleShoe();
+        }
         hand.add(s.dealCard());
         hand.add(s.dealCard());
     }
